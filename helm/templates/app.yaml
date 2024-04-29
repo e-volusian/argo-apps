@@ -8,6 +8,7 @@ spec:
   project: default
   source:
     repoURL: {{ $appValues.repoURL }}
+    path: {{ $appValues.path }}
     targetRevision: HEAD
   destination:
     server: {{ $.Values.spec.destination.server }}
