@@ -1,0 +1,18 @@
+{{- range $appName, $appValues := $.Values.argo_apps }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ $appName }}
+spec:
+  project: default
+  source:
+    repoURL: {{ $appValues.repoURL }}
+    targetRevision: HEAD
+  destination:
+    server: {{ $.Values.spec.destination.server }}
+    namespace: {{ $appValues.namespace }}
+  syncPolicy:
+    automated:
+      prune: false
+{{- end }}

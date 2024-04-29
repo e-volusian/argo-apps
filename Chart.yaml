@@ -6,8 +6,10 @@
  maintainers:
    - name: Nick Speare
      email: nick@example.com
- dependencies:
-   - name: nginx
-     version: "0.0.1"
-   - name: alpine
-     version: "0.0.2"
+#  dependencies:
+#    - name: alpine
+#      version: "0.0.1"
+#      repository: https://github.com/e-volusian/argo-apps/alpine
+#    - name: nginx
+#      version: "0.0.2"
+#      repository: https://github.com/e-volusian/argo-apps/nginx
