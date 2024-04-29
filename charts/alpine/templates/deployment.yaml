@@ -1,0 +1,20 @@
+apiVersion: .Values.apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app }}
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      .Values.app: {{ .Values.app }}
+  template:
+    metadata:
+      labels:
+        .Values.app: {{ .Values.app }}
+    spec:
+      containers:
+      - image: {{ .Values.app }}:{{ .Values.version }}
+        name: {{ .Values.app }}
+        ports:
+        - containerPort: 80
