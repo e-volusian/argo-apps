@@ -3,10 +3,10 @@ spec:
     server: https://kubernetes.default.svc
 argo_apps:
   alpine:
-    repoURL: https://github.com/e-volusian/argo-apps/alpine
+    repoURL: https://github.com/e-volusian/argo-apps/apps/alpine
     namespace: alpine
     syncPolicy: automated
   nginx:
-    repoURL: https://github.com/e-volusian/argo-apps/nginx
+    repoURL: https://github.com/e-volusian/argo-apps/apps/nginx
     namespace: nginx
     syncPolicy: automated
